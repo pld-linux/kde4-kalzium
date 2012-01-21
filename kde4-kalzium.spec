@@ -3,20 +3,23 @@
 
 Summary:	K Desktop Environment - A Periodic System of Elements database
 Summary(pl_PL.UTF8):	K Desktop Environment - Baza danych Układu Okresowego Pierwiastków
-Name:		kalzium
-Version:	4.7.3
+Name:		kde4-kalzium
+Version:	4.8.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	5713d00f453a4e51965455e10de9063e
+# Source0-md5:	9da1db7aca2bc178c11549598a02a3fb
 URL:		http://www.kde.org/
 BuildRequires:	eigen
 BuildRequires:	avogadro-devel
 BuildRequires:	kde4-kdelibs-devel
+BuildRequires:	ocaml
 BuildRequires:	ocaml-runtime
+BuildRequires:	ocaml-facile
 BuildRequires:	openbabel-devel
 Obsoletes:	kde4-kdeedu-kalzium < 4.6.99
+Obsoletes:	kalzium < 4.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,6 +38,7 @@ Summary:	kalzium development files
 Summary(pl.UTF-8):	Pliki dla programistów kalzium
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Obsoletes:	kalzium-devel < 4.8.0
 
 %description devel
 kalzium development files.
@@ -59,7 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir}
 
-%find_lang %{name} --with-kde
+%find_lang %{orgname} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -67,7 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%files -f %{name}.lang
+%files -f %{orgname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kalzium
 %attr(755,root,root) %{_libdir}/kde4/plasma_engine_kalzium.so
