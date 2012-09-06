@@ -4,12 +4,12 @@
 Summary:	K Desktop Environment - A Periodic System of Elements database
 Summary(pl_PL.UTF8):	K Desktop Environment - Baza danych Układu Okresowego Pierwiastków
 Name:		kde4-kalzium
-Version:	4.9.0
+Version:	4.9.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	c2fdd896f22cfc0c2ec2f13e0c365c5f
+# Source0-md5:	bae7182ca6f919eed7904c0c60d31b5a
 URL:		http://www.kde.org/
 BuildRequires:	eigen
 BuildRequires:	avogadro-devel
