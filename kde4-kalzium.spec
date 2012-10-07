@@ -2,7 +2,7 @@
 %define		orgname		kalzium
 
 Summary:	K Desktop Environment - A Periodic System of Elements database
-Summary(pl_PL.UTF8):	K Desktop Environment - Baza danych Układu Okresowego Pierwiastków
+Summary(pl.UTF-8):	K Desktop Environment - Baza danych Układu Okresowego Pierwiastków
 Name:		kde4-kalzium
 Version:	4.9.1
 Release:	1
