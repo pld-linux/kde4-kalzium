@@ -11,15 +11,15 @@ Group:		X11/Applications/Science
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
 # Source0-md5:	28ea0c09be6f577394a6f70eb80462b9
 URL:		http://www.kde.org/
-BuildRequires:	eigen
 BuildRequires:	avogadro-devel
+BuildRequires:	eigen
 BuildRequires:	kde4-kdelibs-devel
 BuildRequires:	ocaml
-BuildRequires:	ocaml-runtime
 BuildRequires:	ocaml-facile
+BuildRequires:	ocaml-runtime
 BuildRequires:	openbabel-devel
-Obsoletes:	kde4-kdeedu-kalzium < 4.6.99
 Obsoletes:	kalzium < 4.8.0
+Obsoletes:	kde4-kdeedu-kalzium < 4.6.99
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -99,6 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/plasma-applet-Molmasscalculator.desktop
 %{_datadir}/apps/libkdeedu
 %{_desktopdir}/kde4/kalzium.desktop
+%{_desktopdir}/kde4/kalzium_cml.desktop
 %{_iconsdir}/hicolor/scalable/apps/kalzium.svgz
 %{_iconsdir}/hicolor/*x*/apps/kalzium.png
 %{_mandir}/man1/kalzium.1*
