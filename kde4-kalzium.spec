@@ -10,6 +10,8 @@ License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://download.kde.org/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
 # Source0-md5:	f773692c7e58567a27d8129f0cc39d5c
+Patch0:		kalzium-eigen2.patch
+Patch1:		kalzium-ocaml.patch
 URL:		http://www.kde.org/
 BuildRequires:	avogadro-devel
 BuildRequires:	boost-python-devel
@@ -49,6 +51,8 @@ Pliki dla programistów kalzium.
 
 %prep
 %setup -q -n %{orgname}-%{version}
+%patch0 -p1
+%patch1 -p1
 
 %build
 install -d build

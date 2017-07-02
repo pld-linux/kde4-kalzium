@@ -1,0 +1,12 @@
+diff -up kalzium-16.12.2/src/CMakeOCamlInstructions.cmake.than kalzium-16.12.2/src/CMakeOCamlInstructions.cmake
+--- kalzium-16.12.2/src/CMakeOCamlInstructions.cmake.than	2017-02-27 20:56:47.075109342 +0100
++++ kalzium-16.12.2/src/CMakeOCamlInstructions.cmake	2017-02-27 20:57:06.802362342 +0100
+@@ -58,7 +58,7 @@ ocaml_ml_to_cmx(${CMAKE_CURRENT_BINARY_D
+ # object files
+ 
+ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/modwrap.o
+-                   COMMAND ${OCAML_OCAMLOPT_EXECUTABLE} -I ${LIBFACILE_INCLUDE_DIR} -c ${CMAKE_CURRENT_SOURCE_DIR}/solver/modwrap.c -o ${CMAKE_CURRENT_BINARY_DIR}/modwrap.o
++                   COMMAND ${OCAML_OCAMLOPT_EXECUTABLE} -I ${LIBFACILE_INCLUDE_DIR} -c ${CMAKE_CURRENT_SOURCE_DIR}/solver/modwrap.c ${CMAKE_CURRENT_BINARY_DIR}/modwrap.o
+                    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/solver/modwrap.c ${CMAKE_CURRENT_BINARY_DIR}/solver.o
+                    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+ set_directory_properties(PROPERTIES ADDITIONAL_MAKE_CLEAN_FILES ${CMAKE_CURRENT_BINARY_DIR}/modwrap.o)
